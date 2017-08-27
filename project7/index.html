@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/main.css">
+		<title>Shopping List Application</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="col-sm-12">
+				<h1>Shopping List</h1>
+			</div>
+
+			<div class="col-sm-12" style="padding-top:6px;">
+				<button onclick="return handlers.addItem()">Add</button>
+				<input id="addItemTextInput" type="text">
+			</div>
+
+			<div class="col-sm-12" style="padding-top:6px;">
+				<button id="changeButton" class="changeButton">Update</button>
+				<input id="changeItemTextInput" type="text">
+			</div>
+
+			<div class="col-sm-12" style="padding-top:6px;">
+				<button id="sortButton" onclick="handlers.sortItem()">Sort</button>
+			</div>
+				
+			<div class="col-sm-12" style="padding-top:6px;">
+				<button id="deleteButton" class="deleteButton">Delete</button>
+			</div>
+
+			<div class="col-sm-12" style="padding-top:6px;">
+				<button id="moveButton" class="moveButton">Move</button>
+			</div>
+
+			<div class="col-sm-6 col-sm-offset-6" style="padding-top:6px;">
+				<button id="cleanPurchasedButton" class="cleanPurchasedButton" disabled="true" onclick="handlers.cleanPurchasedList()">Clean Purchased</button>
+			</div>
+
+			<div class="row features">
+				<div class="col-sm-4 col-xs-10 col-xs-offset-1" style="padding-top:10px;">			
+					<h3>To buy<i class="glyphicon glyphicon-shopping-cart"></i></h3>
+					<ul id="list1" class="list1 list-unstyled">
+					</ul>
+				</div>
+
+				<div class="col-sm-4 col-xs-10 col-xs-offset-1" style="padding-top:10px;">
+					<h3>Purchased <i class="glyphicon glyphicon-ok-circle"></i></h3>
+					<ul id="list2" class="list2">
+					</ul>
+				</div>
+			</div>
+
+			<script src="js/script_shoppingList.js"></script>
+		</div>
+	</body>
+
+</html>
